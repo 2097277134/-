@@ -25,4 +25,4 @@ class CNN(nn.Module):
         x = self.conv2(x)
         x = x.view(x.size(0), -1)   # 展平多维的卷积图成 (batch_size, 32 * 7 * 7)
         output = self.out(x)
-        return output
+        return output, x
